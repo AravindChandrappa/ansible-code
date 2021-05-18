@@ -1,0 +1,15 @@
+- name: Install softwares on remote servers
+   hosts: web
+   tasks:
+    - name: install jdk
+      apt:
+        name: openjdk-8-jdk
+        state: present
+        package: openjdk-8-jdk
+ - name: Install mysql
+   hosts: app
+   tasks:
+    - name: Install MySQL
+      apt:
+       name: mysql-server
+       state: present
